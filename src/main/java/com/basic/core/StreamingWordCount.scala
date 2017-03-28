@@ -7,14 +7,14 @@ import org.apache.spark.streaming.{Seconds, StreamingContext}
 
 /**
   * Created by 79875 on 2017/1/13.
-  * spark-submit --class com.basic.core.StreamingWordCount --master  spark://root2:7077 --driver-cores 1  --driver-memory 1g --executor-memory 768m --num-executors 6  /root/TJ/sparkTest.jar spark://root2:7077 1 6 root2 9999
+  * spark-submit --class com.basic.core.StreamingWordCount --master  spark://root2:7077 /root/TJ/sparkTest.jar 1 6 root2 9999
   *
   * spark-submit --class com.basic.core.StreamingWordCount --master  spark://root2:7077
   * --driver-cores 1
   * --total-executor -cores 4
   * --driver-memory 1g
   * --executor-memory 768m
-  * /root/TJ/sparkTest/sparkTest.jar spark://root2:7077 1 root2 9999
+  * /root/TJ/sparkTest/sparkTest.jar root2 9999
   *
   *
   * Spark On Yarn 模式（Spark On Yarn 模式可以调节Executor的个数）
@@ -32,7 +32,7 @@ object StreamingWordCount {
     val propertiesUtil=new PropertiesUtils()//
     conf.setAppName("SprakStreamingWordCount") //设置应用程序的名称，在程序运行的监控界面可以看到名称
     conf.set("spark.streaming.concurrentJobs", args(0)); //设置job的并行度 默认为1 可以提高吞吐量
-    conf.set("spark.executor.instances", args(1)); //spark executor的并发度
+//    conf.set("spark.executor.instances", args(1)); //spark executor的并发度 只能在Spark On Yarn 上运行
 
     //每隔1秒计算一批数据
     val ssc=new StreamingContext(conf,Seconds(1))

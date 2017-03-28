@@ -8,7 +8,7 @@ import org.apache.spark.streaming.{Seconds, StreamingContext}
 
 /**
   * Created by 79875 on 2017/3/3.
-  * spark-submit --class com.basic.core.KafkaStreamingDirectWordCount --master  spark://root2:7077 --driver-cores 1  --driver-memory 1g --executor-memory 768m --executor-cores 1 /root/TJ/sparkTest.jar tweetswordtopic3
+  * spark-submit --class com.basic.core.KafkaStreamingDirectWordCount --master  spark://root2:7077 /root/TJ/sparkTest.jar tweetswordtopic3
   */
 object KafkaStreamingDirectWordCount {
 
