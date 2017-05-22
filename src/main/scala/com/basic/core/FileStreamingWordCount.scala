@@ -29,7 +29,7 @@ object FileStreamingWordCount {
     conf.setAppName("SprakStreamingWordCount") //设置应用程序的名称，在程序运行的监控界面可以看到名称
 
     //每隔1秒计算一批数据
-    val ssc=new StreamingContext(conf,Seconds(10))
+    val ssc=new StreamingContext(conf,Seconds(1))
     var filePath=args(0)
     //从HDFS中读取文件.map(_._2.toString)
 
