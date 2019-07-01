@@ -2,7 +2,7 @@
   <artifact type="jar" name="sparkTest:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/sparkTest_jar</output-path>
     <root id="archive" name="sparkTest.jar">
-      <element id="module-output" name="sparkTest" />
+      <element id="module-output" name="sparkBenchmark" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/101tec/zkclient/0.3/zkclient-0.3.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/yammer/metrics/metrics-core/2.2.0/metrics-core-2.2.0.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/log4j/log4j/1.2.14/log4j-1.2.14.jar" path-in-jar="/" />
